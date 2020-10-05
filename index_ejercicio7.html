@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cookie storage</title>
+</head>
+
+<body>
+  <h1>Cookie storage simple algorithm</h1>
+  <p>Write your name: <input id="name" type="text" /></p>
+  <button id="execute">Execute</button>
+</body>
+
+<script>
+
+
+document.getElementById('execute').addEventListener('click',()=> {
+const NameInput = document.getElementById('name').value;
+
+document.cookie1 = NameInput
+console.log(document.cookie1)
+});
+
+
+</script>
+</html>
