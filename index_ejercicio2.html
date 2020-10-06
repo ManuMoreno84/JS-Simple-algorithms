@@ -1,0 +1,33 @@
+<html>
+<!DOCTYPE html>
+
+<head>
+    <title>ejercicio factorial de numero N</title>
+</head>
+
+<body>
+    <h1>FACTORIAL DEL NUMERO N</h1>
+    <script>
+        let input; let resultado;
+        input = prompt('Elige un numero entero positivo');
+        console.log(input);
+        console.log(typeof input);
+        if (Number.isNaN(Number(input))){
+            console.log(`${input} is not a number`);
+        }else{
+            input = parseFloat(input);
+
+            input = (input >= 0) ? input : -input;
+            input = (input % 1 === 0) ? input : Math.round(input);
+
+            resultado = 1;
+            for (let i = input; i >= 1; i--){
+                resultado *=i;
+            }
+
+            console.log(`${input}! = ${resultado}`);
+        }
+    </script>
+</body>
+
+</html>
