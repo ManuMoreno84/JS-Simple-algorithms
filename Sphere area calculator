@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Sphere Calculator</title>
+</head>
+<body>
+  <h1>Sphere Calculator</h1>
+  <main>
+    <div>
+      <input id="radio" type="text" />
+      <input id="result" type="text" />
+    </div>
+    <div>
+      <button id="area">Area</button>
+    </div>
+  </main>
+
+<script>
+    document.getElementById('area').addEventListener('click', () => {
+        
+        const inputRadio = document.getElementById('radio').value;
+        console.log(inputRadio);
+
+        console.log(typeof(inputRadio));
+        
+        let sphereArea;
+        console.log(typeof(sphereArea));
+
+            sphereArea = (4 * (Math.PI) * (Math.pow(inputRadio, 2))); 
+            console.log(`The sphere has an Area of ${sphereArea}`);
+    })
+
+</script>
+
+
+</body>
+</html>
