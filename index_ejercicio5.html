@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicio de Fechas</title>
+</head>
+
+<body>
+  <h1>JavaScript</h1>
+  <p>Write a year: <input id="year" type="number" /></p>
+  <p>Write a month: <input id="month" type="number" /></p>
+  <p>Write a day: <input id="day" type="number" /></p>
+  <button id="execute">Execute</button><br /><br />
+  <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+</body>
+
+<script>
+ document.getElementById('execute').addEventListener('click', () => {
+      const year = document.getElementById('year').value;
+      const month = document.getElementById('month').value;
+      const day = document.getElementById('day').value;
+
+    const date = new Date(`${year}/${month}/${day}`);
+    const today = new Date();
+    const oneDay = 1000 * 60 * 60 * 24; // One day in milliseconds
+      const days = Math.ceil((date.getTime() - today.getTime()) / oneDay);
+
+      const textArea = document.getElementById('textArea');
+      if (days > 0) {
+        textArea.innerHTML = `${days} days until ${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+      } else if (days < 0) {
+        textArea.innerHTML = `The date  ${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} is past for ${-days} days`;
+      } else if (days === 0) {
+        textArea.innerHTML = `The date  ${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} is today`;
+      } else {
+        textArea.innerHTML = 'Write a date, please';
+      }
+    });
+
+
+</script>
+
+</html>
