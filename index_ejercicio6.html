@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Armstrong Numbers</title>
+</head>
+
+<body>
+  <h1>Armstrong Numbers</h1>
+  <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+
+  <script>
+    let text = `Estos son los numeros armstrong entre 100 y 9999:\n`;
+    for (let i=100; i<10000; i++){
+        const str = i.toString();
+        const numDigits = str.length;
+        let result = 0;
+        for (let j=0; j<numDigits; j++){
+            result += parseInt(str[j],10)**numDigits;
+        }
+        if (result===i) text += `${i}\n`;
+    }
+    document.getElementById('textArea').innerHTML = text;
+  </script>
+</body>
+
+</html>
