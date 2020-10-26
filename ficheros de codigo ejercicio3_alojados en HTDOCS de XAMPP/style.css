@@ -1,0 +1,52 @@
+p {
+color: red;
+border: 30px silver;
+}
+head{
+    font-family: fantasy;
+    font-weight: bold;
+    background-color: red;
+    text-align: center;
+}
+header{
+    font-family: fantasy;
+    font-weight: bold;
+    background-color: red;
+    text-align: center;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #2000;
+    background-color: goldenrod;
+    text-align: center;
+    text-shadow: 10pt;
+}
+
+button{
+    color: darkgreen;
+    position: relative;
+    border-radius: 10 px;
+    border-color: darksalmon;
+}
+body {
+    align-self: center;
+    border-color: black;
+    border-width: 5pt;
+}
+div {
+    color: rgb(0, 255, 21);
+    background-color: blue;
+    padding-top: 10%;
+    }
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 300;
+    background-color: goldenrod;
+    padding-right: 20pt;
+    block-size: auto;
+    resize: both;
+}
